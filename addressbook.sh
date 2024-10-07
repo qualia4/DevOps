@@ -30,6 +30,13 @@ function search_contacts() {
     done
 }
 
+function help() {
+    echo "Possible commands: "
+    echo "add - Adds a new contact with name, phone, email"
+    echo "search - Finds and prints a contact"
+    echo "remove - Removes a contact"
+}
+
 case "$1" in
     add)
         add_contact
@@ -42,5 +49,6 @@ case "$1" in
         ;;
     *)
         echo "Wrong command"
+        help
         ;;
 esac
